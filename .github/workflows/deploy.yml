@@ -32,7 +32,7 @@ jobs:
 
       - name: Resolve base path for GitHub Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v5.1.0
         with:
           static_site_generator: astro
           # Auto-enable GitHub Pages on first run so the workflow is self-bootstrapping.
