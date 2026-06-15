@@ -60,8 +60,9 @@ The GitHub Actions workflow sets both automatically via `actions/configure-pages
 ## Deploying to GitHub Pages
 
 1. Push the repo to GitHub (any name; default URL becomes `<user>.github.io/<repo-name>/`).
-2. In the repo's **Settings → Pages**, set **Source = GitHub Actions**.
-3. Push to `main`. The workflow at `.github/workflows/deploy.yml` builds and deploys automatically.
+2. Push to `main`. The workflow at `.github/workflows/deploy.yml` builds and deploys automatically.
+
+The workflow is **self-bootstrapping**: `actions/configure-pages@v5` runs with `enablement: true`, so it enables GitHub Pages on the repo on first run — no manual toggle in Settings → Pages is required. (Caveat: GitHub Pages on **private** repos requires Pro/Team/Enterprise. Free plan = repo must be public.)
 
 The deploy URL appears in the Actions run output and in **Settings → Pages**.
 

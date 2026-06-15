@@ -35,6 +35,9 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           static_site_generator: astro
+          # Auto-enable GitHub Pages on first run so the workflow is self-bootstrapping.
+          # Requires the repo to be public (Free plan) or on Pro/Team/Enterprise (private).
+          enablement: true
 
       - name: Build
         env:

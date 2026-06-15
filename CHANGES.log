@@ -85,3 +85,5 @@
 2026-06-15 11:55 | UPDATE | README.md | reflect scaffolded status, quick start, new tree, roadmap progress
 2026-06-15 11:55 | UPDATE | AGENTS.md | scaffolded phase, stack conventions, new quick-pointer entries
 2026-06-15 11:55 | UPDATE | PREREQUISITES.md | add "project scaffolded" checkmark to already-in-place list
+2026-06-15 14:13 | UPDATE | .github/workflows/deploy.yml | configure-pages enablement: true so workflow self-bootstraps Pages
+2026-06-15 14:13 | UPDATE | SITE.md | document self-bootstrapping Pages deploy (no manual Settings toggle)
