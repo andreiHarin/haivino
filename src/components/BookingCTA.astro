@@ -9,8 +9,9 @@ const otherLabel = locale === "ro" ? "BOOK" : "REZERVĂ";
 ---
 <a
   href={`tel:${contacts.phone.tel}`}
-  class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-burgundy text-cream font-medium tracking-wide shadow-[0_8px_24px_rgba(110,31,42,0.35)] hover:bg-burgundy-soft hover:scale-[1.03] transition-all"
+  class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-burgundy/70 text-cream/80 font-medium tracking-wide ring-2 ring-cream/70 ring-offset-2 ring-offset-transparent shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-sm hover:bg-burgundy hover:text-cream hover:ring-cream transition-all"
   aria-label={`${tr.cta.bookHere} — ${contacts.phone.national}`}
+  title={locale === "ro" ? "Rezervare prin telefon (formularul vine în curând)" : "Phone booking (form coming soon)"}
 >
   <span aria-hidden="true">☎</span>
   <span class="text-sm md:text-base">{tr.cta.book} <span class="opacity-60 mx-1">/</span> {otherLabel}</span>

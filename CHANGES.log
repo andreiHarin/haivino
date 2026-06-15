@@ -92,3 +92,4 @@
 2026-06-15 14:42 | UPDATE | media/placeholders/placeholder-people.png | redraw with all four glasses clearly raised in a toast
 2026-06-15 14:49 | UPDATE | media/placeholders/placeholder-people.png | fix 2nd-from-left person to show her arm raised holding her glass
 2026-06-15 14:58 | UPDATE | src/components/pages/HomeContent.astro | revert hero to single-image (placeholder-hero only); add solid burgundy fallback + gradient overlay + text shadow for guaranteed readability
+2026-06-15 15:03 | UPDATE | src/components/BookingCTA.astro | mute booking pill (placeholder state) + add cream ring so it stands out on burgundy backgrounds
