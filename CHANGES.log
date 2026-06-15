@@ -87,3 +87,8 @@
 2026-06-15 11:55 | UPDATE | PREREQUISITES.md | add "project scaffolded" checkmark to already-in-place list
 2026-06-15 14:13 | UPDATE | .github/workflows/deploy.yml | configure-pages enablement: true so workflow self-bootstraps Pages
 2026-06-15 14:13 | UPDATE | SITE.md | document self-bootstrapping Pages deploy (no manual Settings toggle)
+2026-06-15 14:35 | CREATE | media/placeholders/placeholder-people.png | cartoon of friends toasting wine for hero
+2026-06-15 14:35 | UPDATE | src/components/pages/HomeContent.astro | add people cartoon next to hero title (2-col on md+)
+2026-06-15 14:42 | UPDATE | media/placeholders/placeholder-people.png | redraw with all four glasses clearly raised in a toast
+2026-06-15 14:49 | UPDATE | media/placeholders/placeholder-people.png | fix 2nd-from-left person to show her arm raised holding her glass
+2026-06-15 14:58 | UPDATE | src/components/pages/HomeContent.astro | revert hero to single-image (placeholder-hero only); add solid burgundy fallback + gradient overlay + text shadow for guaranteed readability
