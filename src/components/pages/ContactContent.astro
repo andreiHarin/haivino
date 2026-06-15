@@ -1,0 +1,73 @@
+---
+import { t, type Locale } from "../../i18n/utils";
+import { contacts } from "../../data/contacts";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale);
+---
+<section class="mx-auto max-w-3xl px-4 md:px-6 pt-16 md:pt-24 text-center">
+  <h1 class="font-display text-4xl md:text-5xl text-burgundy">{tr.contact.title}</h1>
+  <p class="mt-4 text-lg text-ink/75">{tr.contact.lead}</p>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 md:px-6 py-12 md:py-20 grid gap-10 md:grid-cols-2">
+  <div class="space-y-6">
+    <div>
+      <h2 class="font-display text-xl text-burgundy">{tr.contact.addressLabel}</h2>
+      <p class="mt-1 text-ink/80">{contacts.address.formatted}</p>
+      <a href={contacts.links.googleMapsSearch} target="_blank" rel="noopener noreferrer" class="text-sm text-burgundy underline-offset-4 hover:underline">Google Maps →</a>
+    </div>
+
+    <div>
+      <h2 class="font-display text-xl text-burgundy">{tr.contact.phoneLabel}</h2>
+      <a href={`tel:${contacts.phone.tel}`} class="mt-1 inline-block text-ink/85 hover:text-burgundy">
+        {contacts.phone.national} <span class="text-ink/40">·</span> {contacts.phone.international}
+      </a>
+    </div>
+
+    <div>
+      <h2 class="font-display text-xl text-burgundy">{tr.contact.hoursLabel}</h2>
+      <p class="mt-1 text-ink/60 italic">{tr.contact.hoursPlaceholder}</p>
+    </div>
+  </div>
+
+  <div class="bg-cream-deep rounded-[var(--radius-card)] p-6 md:p-8">
+    <h2 class="font-display text-2xl text-burgundy">{tr.contact.formTitle}</h2>
+    <p class="mt-2 text-sm text-ink/70">{tr.contact.formIntro}</p>
+
+    <form class="mt-6 grid gap-4 opacity-70 pointer-events-none" aria-disabled="true">
+      <label class="grid gap-1 text-sm">
+        <span>{tr.contact.formFields.name}</span>
+        <input type="text" name="name" class="bg-cream rounded-md px-3 py-2 border border-cream-deep" disabled />
+      </label>
+      <label class="grid gap-1 text-sm">
+        <span>{tr.contact.formFields.email}</span>
+        <input type="email" name="email" class="bg-cream rounded-md px-3 py-2 border border-cream-deep" disabled />
+      </label>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <label class="grid gap-1 text-sm">
+          <span>{tr.contact.formFields.people}</span>
+          <input type="number" name="people" min="1" class="bg-cream rounded-md px-3 py-2 border border-cream-deep" disabled />
+        </label>
+        <label class="grid gap-1 text-sm">
+          <span>{tr.contact.formFields.date}</span>
+          <input type="date" name="date" class="bg-cream rounded-md px-3 py-2 border border-cream-deep" disabled />
+        </label>
+        <label class="grid gap-1 text-sm">
+          <span>{tr.contact.formFields.time}</span>
+          <input type="time" name="time" class="bg-cream rounded-md px-3 py-2 border border-cream-deep" disabled />
+        </label>
+      </div>
+      <label class="grid gap-1 text-sm">
+        <span>{tr.contact.formFields.message}</span>
+        <textarea name="message" rows="3" class="bg-cream rounded-md px-3 py-2 border border-cream-deep" disabled></textarea>
+      </label>
+      <button type="submit" class="mt-2 inline-flex justify-center bg-burgundy text-cream rounded-full px-5 py-2.5 font-medium" disabled>
+        {tr.contact.formFields.submit}
+      </button>
+    </form>
+
+    <p class="mt-4 text-xs text-ink/60">{tr.contact.formNote}</p>
+  </div>
+</section>

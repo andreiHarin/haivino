@@ -1,0 +1,87 @@
+# Haivino — Change Log
+# Format: YYYY-MM-DD HH:MM | ACTION | path | short reason
+# Actions: CREATE | UPDATE | RENAME | DELETE
+# Append-only. One line per file change. See .cursor/rules/change-log.mdc
+
+2026-06-15 10:09 | CREATE | .cursor/rules/change-log.mdc | rule: log every file change in CHANGES.log
+2026-06-15 10:09 | CREATE | .cursor/rules/update-docs.mdc | rule: keep README.md and AGENTS.md current
+2026-06-15 10:09 | CREATE | CHANGES.log | initialize project audit trail
+2026-06-15 10:09 | CREATE | README.md | initial readme for wine bistrot website project
+2026-06-15 10:09 | CREATE | AGENTS.md | initial agent guidance for wine bistrot project
+2026-06-15 10:29 | CREATE | cipassoroma/README.md | index for cipassoitalia.it reference dossier
+2026-06-15 10:29 | CREATE | cipassoroma/00-quick-facts.md | at-a-glance facts about CiPASSO Roma
+2026-06-15 10:29 | CREATE | cipassoroma/01-brand-and-positioning.md | brand pillars, voice, audience for CiPASSO
+2026-06-15 10:29 | CREATE | cipassoroma/02-sitemap-and-pages.md | discovered pages and URL status for cipassoitalia.it
+2026-06-15 10:29 | CREATE | cipassoroma/03-content-it.md | verbatim Italian copy captured from cipassoitalia.it
+2026-06-15 10:29 | CREATE | cipassoroma/04-content-en.md | English copy captured from /en/ of cipassoitalia.it
+2026-06-15 10:29 | CREATE | cipassoroma/05-tech-stack.md | inferred tech stack of cipassoitalia.it (WordPress/Yoast)
+2026-06-15 10:29 | CREATE | cipassoroma/06-design-and-ux-notes.md | layout and UX patterns observed on CiPASSO site
+2026-06-15 10:29 | CREATE | cipassoroma/07-adaptation-ideas-for-haivino.md | takeaways and open questions for Haivino
+2026-06-15 10:29 | UPDATE | README.md | point to cipassoroma/ reference dossier and update structure
+2026-06-15 10:29 | UPDATE | AGENTS.md | record cipassoroma/ as the location of the Roma reference material
+2026-06-15 10:47 | CREATE | .cursor/rules/tech-and-ux-bias.mdc | rule: prefer newer/better tech & UX at same cost; cipasso is reference only
+2026-06-15 10:47 | UPDATE | AGENTS.md | add tech-and-ux-bias rule to always-on rules and working agreements
+2026-06-15 10:47 | UPDATE | README.md | document tech-and-ux-bias convention and rule in structure
+2026-06-15 10:59 | CREATE | utils/contacts.json | canonical HAiViNO contact info (address, phone, links, tbd fields)
+2026-06-15 10:59 | CREATE | utils/README.md | document purpose and conventions of utils/ folder
+2026-06-15 10:59 | UPDATE | README.md | add utils/ to structure tree and HAiViNO location section
+2026-06-15 10:59 | UPDATE | AGENTS.md | reference HAiViNO location and utils/contacts.json as canonical source
+2026-06-15 11:06 | CREATE | media/placeholders/placeholder-logo.png | AI cartoon placeholder: wine-glass + grape-leaf logo mark
+2026-06-15 11:06 | CREATE | media/placeholders/placeholder-hero.png | AI cartoon placeholder: cozy wine bistrot exterior at dusk
+2026-06-15 11:06 | CREATE | media/placeholders/placeholder-wine.png | AI cartoon placeholder: wine bottle and glass on wooden table
+2026-06-15 11:06 | CREATE | media/placeholders/placeholder-food.png | AI cartoon placeholder: charcuterie board top-down
+2026-06-15 11:06 | CREATE | media/placeholders/placeholder-interior.png | AI cartoon placeholder: cozy wine bistrot interior with bottle wall
+2026-06-15 11:06 | CREATE | media/photos/.gitkeep | reserve folder for real HAiViNO photos
+2026-06-15 11:06 | CREATE | media/README.md | document media folder structure, placeholders, and naming convention
+2026-06-15 11:06 | UPDATE | README.md | add media/ to structure tree and note placeholders in roadmap step 3
+2026-06-15 11:06 | UPDATE | AGENTS.md | add media/ to quick pointers
+2026-06-15 11:13 | CREATE | PREREQUISITES.md | tracker of blocking decisions and pre-launch assets; RO+EN languages confirmed
+2026-06-15 11:13 | UPDATE | README.md | link PREREQUISITES.md, record RO+EN language decision
+2026-06-15 11:13 | UPDATE | AGENTS.md | record RO+EN languages and point to PREREQUISITES.md
+2026-06-15 11:14 | UPDATE | PREREQUISITES.md | decision: devs-only content editing (static-site path)
+2026-06-15 11:14 | UPDATE | AGENTS.md | record devs-only content model decision
+2026-06-15 11:15 | UPDATE | PREREQUISITES.md | decision: monthly budget €10-20/month
+2026-06-15 11:15 | UPDATE | AGENTS.md | record €10-20/month budget envelope
+2026-06-15 11:16 | UPDATE | PREREQUISITES.md | decision: reservation = phone + form (phase 1), SaaS widget later
+2026-06-15 11:16 | UPDATE | AGENTS.md | record phased reservation strategy (phone + form first)
+2026-06-15 11:17 | UPDATE | PREREQUISITES.md | decision: domain haivino.ro owned; hosting recommendation Cloudflare Pages (pending)
+2026-06-15 11:17 | UPDATE | utils/contacts.json | add website https://haivino.ro to links
+2026-06-15 11:17 | UPDATE | AGENTS.md | record haivino.ro domain and Cloudflare Pages hosting recommendation
+2026-06-15 11:27 | UPDATE | PREREQUISITES.md | hosting decision deferred by owner; flagged to revisit next session
+2026-06-15 11:27 | UPDATE | AGENTS.md | mark hosting deferred; do not scaffold until decided
+2026-06-15 11:31 | UPDATE | PREREQUISITES.md | hosting strategy: phase-1 GitHub Pages (default URL), phase-2 host TBD; scaffolding unblocked
+2026-06-15 11:31 | UPDATE | AGENTS.md | lift scaffolding guard; record phased hosting (GH Pages now, real host later)
+2026-06-15 11:55 | CREATE | package.json | Astro 5 + Tailwind v4 + TypeScript dependencies and npm scripts
+2026-06-15 11:55 | CREATE | astro.config.mjs | Astro config: i18n (RO default, EN under /en/), env-driven SITE and BASE_PATH
+2026-06-15 11:55 | CREATE | tsconfig.json | TS strict, path aliases ~/* and @contacts, JSON imports
+2026-06-15 11:55 | CREATE | .gitignore | ignore dist/, node_modules/, .env, editor/OS files
+2026-06-15 11:55 | CREATE | .nvmrc | pin Node 22 for local dev and CI
+2026-06-15 11:55 | CREATE | src/styles/global.css | Tailwind v4 entry + brand tokens (@theme) + marquee animation
+2026-06-15 11:55 | CREATE | src/i18n/ro.json | all Romanian copy (meta, nav, home, about, menu, contact, footer)
+2026-06-15 11:55 | CREATE | src/i18n/en.json | all English copy mirror of ro.json
+2026-06-15 11:55 | CREATE | src/i18n/utils.ts | t(), routes, localeUrl(), otherLocale() helpers
+2026-06-15 11:55 | CREATE | src/data/contacts.ts | typed re-export of utils/contacts.json
+2026-06-15 11:55 | CREATE | src/components/Layout.astro | base html shell with header/footer/CTA + meta
+2026-06-15 11:55 | CREATE | src/components/Header.astro | sticky nav, mobile bar, language switcher
+2026-06-15 11:55 | CREATE | src/components/Footer.astro | contact card, hours, links, legal
+2026-06-15 11:55 | CREATE | src/components/Marquee.astro | CSS-only horizontal ticker band, variants burgundy/cream
+2026-06-15 11:55 | CREATE | src/components/BookingCTA.astro | sticky bilingual tap-to-call button
+2026-06-15 11:55 | CREATE | src/components/ValueQuartet.astro | 4-card responsive value proposition section
+2026-06-15 11:55 | CREATE | src/components/pages/HomeContent.astro | home body: hero+marquee+intro+quartet+atmosphere
+2026-06-15 11:55 | CREATE | src/components/pages/AboutContent.astro | about body: hero, story, values
+2026-06-15 11:55 | CREATE | src/components/pages/MenuContent.astro | menu body: placeholder sections + allergen note
+2026-06-15 11:55 | CREATE | src/components/pages/ContactContent.astro | contact body: address/phone/hours + disabled form
+2026-06-15 11:55 | CREATE | src/pages/index.astro | RO home route
+2026-06-15 11:55 | CREATE | src/pages/despre.astro | RO about route
+2026-06-15 11:55 | CREATE | src/pages/meniu.astro | RO menu route
+2026-06-15 11:55 | CREATE | src/pages/contact.astro | RO contact route
+2026-06-15 11:55 | CREATE | src/pages/en/index.astro | EN home route
+2026-06-15 11:55 | CREATE | src/pages/en/about.astro | EN about route
+2026-06-15 11:55 | CREATE | src/pages/en/menu.astro | EN menu route
+2026-06-15 11:55 | CREATE | src/pages/en/contact.astro | EN contact route
+2026-06-15 11:55 | CREATE | public/favicon.svg | placeholder brand favicon (wine glass + gold arc)
+2026-06-15 11:55 | CREATE | .github/workflows/deploy.yml | GitHub Actions build & deploy to GitHub Pages
+2026-06-15 11:55 | CREATE | SITE.md | dev / build / deploy guide with phase-2 migration plan
+2026-06-15 11:55 | UPDATE | README.md | reflect scaffolded status, quick start, new tree, roadmap progress
+2026-06-15 11:55 | UPDATE | AGENTS.md | scaffolded phase, stack conventions, new quick-pointer entries
+2026-06-15 11:55 | UPDATE | PREREQUISITES.md | add "project scaffolded" checkmark to already-in-place list

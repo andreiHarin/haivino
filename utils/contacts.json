@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "purpose": "Canonical contact information for HAiViNO Wine Bistrot. Single source of truth — pages, footer, schema.org JSON-LD, contact page, sitemap, etc. should all read from this file.",
+    "lastUpdated": "2026-06-15",
+    "source": "Provided by the project owner; cross-referenced with Google Maps listing name 'HAiViNO Wine Bistrot'.",
+    "notes": "Fields under `tbd` are not yet confirmed. Do not invent values — ask the owner before filling them in."
+  },
+
+  "name": "HAiViNO Wine Bistrot",
+  "shortName": "HAiViNO",
+  "type": "WineBar",
+  "googleMapsName": "HAiViNO Wine Bistrot",
+
+  "address": {
+    "street": "Strada Inocențiu Micu Klein 23",
+    "streetAscii": "Strada Inocentiu Micu Klein 23",
+    "city": "Cluj-Napoca",
+    "region": "Cluj",
+    "postalCode": "400087",
+    "country": "Romania",
+    "countryCode": "RO",
+    "formatted": "Strada Inocențiu Micu Klein 23, 400087 Cluj-Napoca, Romania"
+  },
+
+  "phone": {
+    "raw": "0787710900",
+    "national": "0787 710 900",
+    "international": "+40 787 710 900",
+    "tel": "+40787710900"
+  },
+
+  "links": {
+    "website": "https://haivino.ro",
+    "googleMapsSearch": "https://www.google.com/maps/search/?api=1&query=HAiViNO+Wine+Bistrot+Cluj-Napoca"
+  },
+
+  "tbd": {
+    "email": null,
+    "openingHours": null,
+    "social": {
+      "instagram": null,
+      "facebook": null,
+      "tripadvisor": null,
+      "google": null
+    },
+    "reservationProvider": null,
+    "geo": {
+      "lat": null,
+      "lng": null
+    }
+  }
+}

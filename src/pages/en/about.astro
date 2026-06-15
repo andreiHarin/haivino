@@ -1,0 +1,9 @@
+---
+import Layout from "../../components/Layout.astro";
+import AboutContent from "../../components/pages/AboutContent.astro";
+import { t } from "../../i18n/utils";
+const tr = t("en");
+---
+<Layout locale="en" pageTitle={tr.about.title}>
+  <AboutContent locale="en" />
+</Layout>

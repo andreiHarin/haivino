@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "siteTitle": "HAiViNO Wine Bistrot",
+    "siteDescription": "A wine bistrot in the heart of Cluj-Napoca. Carefully chosen wines, warm atmosphere, sincere hospitality."
+  },
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "contact": "Contact",
+    "switchLanguage": "RO"
+  },
+
+  "cta": {
+    "book": "BOOK",
+    "bookHere": "Book a table",
+    "callUs": "Call us",
+    "writeUs": "Write to us"
+  },
+
+  "home": {
+    "heroTitle": "The right wine for the right moment.",
+    "heroSubtitle": "A wine bistrot in the heart of Cluj-Napoca.",
+    "marquee": "HAiViNO is at 23 Inocențiu Micu Klein Street, Cluj-Napoca",
+
+    "introTitle": "A place about wine, about taste, about us.",
+    "introBody": [
+      "HAiViNO is our wine bistrot in Cluj-Napoca — built for people who love good wine and long conversations.",
+      "Our selection revolves around carefully chosen Romanian and European wines, paired with simple, tasty, honest plates.",
+      "Come for a glass — or a bottle — and stay a while."
+    ],
+
+    "atmosphereTitle": "The HAiViNO atmosphere",
+    "atmosphereBody": [
+      "We want every guest to feel at home: warm light, quiet music, small tables, long conversations.",
+      "Inocențiu Micu Klein Street is one of the most beautiful streets in central Cluj — come and discover it with us, over a glass of wine."
+    ],
+
+    "valueQuartet": [
+      { "title": "The wine",       "body": "A careful selection of Romanian and European wines, by the glass and by the bottle." },
+      { "title": "The kitchen",    "body": "Simple, tasty plates designed to walk hand-in-hand with the wine." },
+      { "title": "The atmosphere", "body": "Warm, intimate, unhurried. The perfect place for an evening worth telling about." },
+      { "title": "The location",   "body": "In central Cluj-Napoca, at 23 Inocențiu Micu Klein Street." }
+    ]
+  },
+
+  "about": {
+    "title": "About HAiViNO",
+    "lead": "HAiViNO is a place about wine, about friends, and about Cluj.",
+    "story": [
+      "We wanted a place where the wine is the protagonist, not the decor — a small, carefully thought wine bistrot where every bottle has a story.",
+      "We work with Romanian and European producers we know and trust.",
+      "The rest of the lines here are temporary. We'll write them together when the HAiViNO story is ready to be told."
+    ],
+
+    "valuesTitle": "What matters to us",
+    "values": [
+      { "title": "The wine",   "body": "Wine is the reason, not the decoration. We curate carefully, not broadly." },
+      { "title": "The people", "body": "Guests are more than customers. The team is more than staff." },
+      { "title": "The place",  "body": "Central Cluj deserves a wine bistrot that lives up to it." }
+    ]
+  },
+
+  "menu": {
+    "title": "Menu",
+    "intro": "The HAiViNO menu is built around the wine. Below is a placeholder structure — the real menu will live here as soon as it's finalized.",
+    "placeholderNote": "Placeholder content — the real menu will replace these sections.",
+    "sections": [
+      { "title": "Wines by the glass",  "body": "A rotating selection of Romanian and European wines, by the glass." },
+      { "title": "Wines by the bottle", "body": "Our wine list — by region, grape variety, and producer." },
+      { "title": "Small plates",        "body": "Cheeses, cured meats, olives, bread. All designed to go with the wine." },
+      { "title": "Warm plates",         "body": "A few seasonal dishes — simple and tasty." }
+    ],
+
+    "allergenNote": "For allergen and ingredient information, please ask our staff."
+  },
+
+  "contact": {
+    "title": "Contact",
+    "lead": "HAiViNO is here for you. Call, write, or drop by.",
+
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Hours",
+    "hoursPlaceholder": "Hours pending confirmation.",
+
+    "formTitle": "Write to us",
+    "formIntro": "For reservations, questions, or partnerships — fill in the form and we'll get back to you as soon as possible.",
+    "formFields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "people": "Number of guests",
+      "date": "Date",
+      "time": "Time",
+      "message": "Message",
+      "submit": "Send request",
+      "consent": "I agree to the processing of my personal data according to the privacy policy."
+    },
+    "formNote": "The form is not yet wired up. For reservations, please call the number above."
+  },
+
+  "footer": {
+    "tagline": "A wine bistrot in the heart of Cluj-Napoca.",
+    "contactHeader": "Contact",
+    "hoursHeader": "Hours",
+    "socialHeader": "Social",
+    "menuHeader": "Menu",
+    "legal": "© 2026 HAiViNO Wine Bistrot. All rights reserved.",
+    "policy": "Privacy policy",
+    "cookies": "Cookie policy"
+  }
+}

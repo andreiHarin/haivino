@@ -1,0 +1,14 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "node_modules", "cipassoroma", "media/placeholders/*.png", "media/photos/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "@contacts": ["utils/contacts.json"]
+    },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

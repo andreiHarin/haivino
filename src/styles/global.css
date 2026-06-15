@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   Brand tokens — single source of truth for HAiViNO design.
+   Tailwind v4 reads these as utility classes:
+     bg-burgundy / text-gold / bg-cream / font-display ...
+   Update here ONCE when the brand decision lands.
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  --color-burgundy: #6E1F2A;
+  --color-burgundy-soft: #8A2E3B;
+  --color-gold: #C9A24B;
+  --color-gold-soft: #E0BC6F;
+  --color-cream: #F5EDDC;
+  --color-cream-deep: #E8DEC6;
+  --color-wood: #8B6B4A;
+  --color-ink: #1F1416;
+
+  --font-display: "Cormorant Garamond", "Iowan Old Style", "Apple Garamond", "Georgia", serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --radius-card: 0.75rem;
+  --shadow-soft: 0 2px 12px rgba(31, 20, 22, 0.08);
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-cream);
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Marquee — used by <Marquee /> component */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+}

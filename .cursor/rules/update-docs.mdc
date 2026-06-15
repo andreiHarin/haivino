@@ -1,0 +1,50 @@
+---
+description: Keep README.md and AGENTS.md current when significant changes happen
+alwaysApply: true
+---
+
+# Documentation Maintenance
+
+`README.md` and `AGENTS.md` are the entry points for humans and AI agents respectively. They must stay accurate. When you make a **significant** change to the project, update them in the same turn as the change.
+
+## What counts as "significant"
+
+Update the docs when any of these happen:
+
+- **Structure**: new top-level folder, moved/renamed major directories
+- **Tooling**: new framework, build tool, package manager, or major dependency added/removed
+- **Scripts**: new or changed `npm`/build/dev/deploy commands
+- **Features**: new page, section, language, or major user-facing capability
+- **Conventions**: new coding standard, naming convention, or workflow rule
+- **Environment**: new env var, secret, config file, or external service
+- **Deployment**: change to hosting target, domain, or release process
+
+Trivial edits (typo fixes, content tweaks, small CSS tuning) do **not** require a docs update.
+
+## What to update where
+
+### `README.md` (human-facing)
+- Project overview & goals — keep current if scope changes
+- Tech stack — update when dependencies change
+- Folder structure — update when structure changes
+- How to run locally — update when scripts/commands change
+- Deployment — update when hosting changes
+
+### `AGENTS.md` (agent-facing)
+- Project context & current phase
+- Reference materials (e.g. Roma model location)
+- Active conventions agents must follow
+- Pointers to the change-log and other rules
+- Known constraints / gotchas
+
+## Workflow
+
+1. Make the significant change.
+2. Update `README.md` and/or `AGENTS.md` to reflect it.
+3. Append the standard one-line entries to `CHANGES.log` for each modified file (per the `change-log` rule).
+
+## Tone
+
+- Keep both docs concise and scannable.
+- Prefer bullet lists over prose.
+- Date stamps are not needed inside the docs — `CHANGES.log` is the timeline.

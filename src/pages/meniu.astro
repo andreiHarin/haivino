@@ -1,0 +1,9 @@
+---
+import Layout from "../components/Layout.astro";
+import MenuContent from "../components/pages/MenuContent.astro";
+import { t } from "../i18n/utils";
+const tr = t("ro");
+---
+<Layout locale="ro" pageTitle={tr.menu.title}>
+  <MenuContent locale="ro" />
+</Layout>

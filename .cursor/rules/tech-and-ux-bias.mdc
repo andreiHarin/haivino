@@ -1,0 +1,52 @@
+---
+description: CiPASSO is only a structural reference — prefer newer tech and better UX at the same cost
+alwaysApply: true
+---
+
+# Tech & UX Bias: Newer at Same Cost
+
+The reference site `cipassoroma/` (CiPASSO, cipassoitalia.it) is a **structural and stylistic guide only** — not a technology blueprint. When choosing tools, libraries, or UI patterns for Haivino:
+
+## The rule
+
+> **Prefer the newer / better option** when its **cost is the same or lower** than the equivalent on the reference site.
+
+"Cost" includes all of:
+- License / hosting price
+- Developer effort to set up and maintain
+- Learning curve for the user (if they will edit content)
+- Performance / accessibility / SEO budget
+
+If a modern alternative wins on capability and is **not** more expensive on any of those axes, choose it.
+
+## Concrete defaults (revise as the stack matures)
+
+| Area | Reference (CiPASSO) | Default for Haivino |
+|------|---------------------|---------------------|
+| Site type | WordPress + page builder | Static-site / SSG (Astro, Next.js static, SvelteKit) — unless the user needs a CMS |
+| Styling | Theme CSS + builder | Tailwind CSS or modern CSS (logical properties, container queries, `:has`) |
+| Images | Theme-served | `<picture>` + AVIF/WebP, responsive `srcset`, lazy-load, `loading="lazy"` |
+| Fonts | Theme defaults | Self-hosted variable fonts, `font-display: swap`, preloaded |
+| Animations | Marquee, fade-ins via builder JS | CSS-only where possible; `prefers-reduced-motion` respected; View Transitions API if useful |
+| Forms | CF7 / WPForms | Native HTML5 + serverless function (Cloudflare Workers / Netlify / Vercel) or Formspree-style |
+| Booking | External embedded widget | Same pattern is fine, but the trigger must be accessible and lazy-loaded |
+| i18n | WPML / Polylang | Framework-native i18n routing (e.g. Astro i18n, Next.js routing) |
+| Accessibility | Not verified | WCAG 2.2 AA target; keyboard-navigable; focus-visible; semantic HTML |
+| SEO | Yoast | Built-in metadata + JSON-LD `Restaurant` schema; clean working sitemap |
+| Analytics | Unknown | Privacy-friendly (Plausible / Umami / Cloudflare Web Analytics) over GA |
+| Cookie banner | Iubenda-style | Only if actually needed; minimize tracking so consent isn't required |
+
+## What to copy from CiPASSO
+
+Page rhythm, content sectioning, value-prop quartets, marquee bands, sticky bilingual booking CTA, the editorial tone. See `cipassoroma/06-design-and-ux-notes.md` and `cipassoroma/07-adaptation-ideas-for-haivino.md`.
+
+## What to deliberately improve
+
+- A **real menu** on the menu page (HTML, structured, with allergens) — not just a PDF embed.
+- A **working sitemap** and accessible booking trigger.
+- **Native-quality copy** in each language — never literal machine translation.
+- **No duplicated DOM blocks** (the reference site renders sections twice).
+
+## When in doubt
+
+If a modern choice would cost the user more (paid SaaS, complex CMS, heavier hosting), flag the trade-off and let the user decide via a multiple-choice question rather than picking silently.

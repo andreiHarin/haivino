@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import { t, type Locale } from "../../i18n/utils";
+import wineImg from "../../../media/placeholders/placeholder-wine.png";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale);
+---
+<section class="mx-auto max-w-3xl px-4 md:px-6 pt-16 md:pt-24 text-center">
+  <h1 class="font-display text-4xl md:text-5xl text-burgundy">{tr.about.title}</h1>
+  <p class="mt-4 text-lg text-ink/75">{tr.about.lead}</p>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 md:px-6 py-12 md:py-20 grid gap-10 md:grid-cols-2 items-center">
+  <div class="space-y-4 text-ink/80 leading-relaxed">
+    {tr.about.story.map((p) => <p>{p}</p>)}
+  </div>
+  <div class="rounded-[var(--radius-card)] overflow-hidden shadow-[var(--shadow-soft)]">
+    <Image src={wineImg} alt="" widths={[480, 960]} sizes="(min-width: 768px) 50vw, 100vw" class="w-full h-auto" />
+  </div>
+</section>
+
+<section class="bg-cream-deep">
+  <div class="mx-auto max-w-6xl px-4 md:px-6 py-16 md:py-20">
+    <h2 class="font-display text-2xl md:text-3xl text-burgundy text-center">{tr.about.valuesTitle}</h2>
+    <div class="mt-10 grid gap-6 md:gap-8 sm:grid-cols-3">
+      {tr.about.values.map((v) => (
+        <article class="bg-cream rounded-[var(--radius-card)] p-6 shadow-[var(--shadow-soft)]">
+          <h3 class="font-display text-xl text-burgundy mb-2">{v.title}</h3>
+          <p class="text-sm leading-relaxed text-ink/80">{v.body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

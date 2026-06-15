@@ -1,0 +1,41 @@
+---
+import { t, localeUrl, otherLocale, type Locale } from "../i18n/utils";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale);
+const base = import.meta.env.BASE_URL;
+const other = otherLocale(locale);
+---
+<header class="sticky top-0 z-40 bg-cream/85 backdrop-blur border-b border-cream-deep">
+  <div class="mx-auto max-w-6xl px-4 md:px-6 h-16 flex items-center justify-between gap-4">
+    <a href={localeUrl(base, locale, "home")} class="flex items-center gap-2 font-display text-xl md:text-2xl text-burgundy hover:text-burgundy-soft transition-colors" aria-label="HAiViNO — home">
+      <span aria-hidden="true">◐</span>
+      <span>HAiViNO</span>
+    </a>
+
+    <nav aria-label="Primary" class="hidden md:flex items-center gap-7 text-sm tracking-wide uppercase">
+      <a href={localeUrl(base, locale, "home")}    class="hover:text-burgundy transition-colors">{tr.nav.home}</a>
+      <a href={localeUrl(base, locale, "about")}   class="hover:text-burgundy transition-colors">{tr.nav.about}</a>
+      <a href={localeUrl(base, locale, "menu")}    class="hover:text-burgundy transition-colors">{tr.nav.menu}</a>
+      <a href={localeUrl(base, locale, "contact")} class="hover:text-burgundy transition-colors">{tr.nav.contact}</a>
+    </nav>
+
+    <a
+      href={localeUrl(base, other, "home")}
+      class="text-sm font-medium px-3 py-1.5 rounded-full border border-burgundy/30 text-burgundy hover:bg-burgundy hover:text-cream transition-colors"
+      aria-label={`Switch language to ${other.toUpperCase()}`}
+    >
+      {tr.nav.switchLanguage}
+    </a>
+  </div>
+
+  <nav aria-label="Primary mobile" class="md:hidden border-t border-cream-deep">
+    <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-around text-xs uppercase tracking-wide">
+      <a href={localeUrl(base, locale, "home")}    class="py-1.5">{tr.nav.home}</a>
+      <a href={localeUrl(base, locale, "about")}   class="py-1.5">{tr.nav.about}</a>
+      <a href={localeUrl(base, locale, "menu")}    class="py-1.5">{tr.nav.menu}</a>
+      <a href={localeUrl(base, locale, "contact")} class="py-1.5">{tr.nav.contact}</a>
+    </div>
+  </nav>
+</header>

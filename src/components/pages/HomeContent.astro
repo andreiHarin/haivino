@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import { t, type Locale } from "../../i18n/utils";
+import Marquee from "../Marquee.astro";
+import ValueQuartet from "../ValueQuartet.astro";
+import heroImg from "../../../media/placeholders/placeholder-hero.png";
+import interiorImg from "../../../media/placeholders/placeholder-interior.png";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale);
+---
+<section class="relative">
+  <div class="absolute inset-0 -z-10">
+    <Image src={heroImg} alt="" loading="eager" widths={[640, 1280, 1920]} sizes="100vw" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-burgundy/55"></div>
+  </div>
+  <div class="mx-auto max-w-6xl px-4 md:px-6 py-28 md:py-40 text-cream">
+    <p class="uppercase tracking-[0.4em] text-gold text-xs md:text-sm">{tr.meta.siteTitle}</p>
+    <h1 class="mt-4 font-display text-4xl md:text-6xl leading-tight max-w-3xl">{tr.home.heroTitle}</h1>
+    <p class="mt-4 text-cream/85 text-lg md:text-xl max-w-xl">{tr.home.heroSubtitle}</p>
+  </div>
+</section>
+
+<Marquee text={tr.home.marquee} />
+
+<section class="mx-auto max-w-3xl px-4 md:px-6 py-16 md:py-24 text-center">
+  <h2 class="font-display text-3xl md:text-4xl text-burgundy">{tr.home.introTitle}</h2>
+  <div class="mt-6 space-y-4 text-ink/80 leading-relaxed">
+    {tr.home.introBody.map((p) => <p>{p}</p>)}
+  </div>
+</section>
+
+<ValueQuartet items={tr.home.valueQuartet} />
+
+<section class="mx-auto max-w-6xl px-4 md:px-6 py-16 md:py-24 grid gap-10 md:grid-cols-2 items-center">
+  <div>
+    <h2 class="font-display text-3xl md:text-4xl text-burgundy">{tr.home.atmosphereTitle}</h2>
+    <div class="mt-5 space-y-4 text-ink/80 leading-relaxed">
+      {tr.home.atmosphereBody.map((p) => <p>{p}</p>)}
+    </div>
+  </div>
+  <div class="rounded-[var(--radius-card)] overflow-hidden shadow-[var(--shadow-soft)]">
+    <Image src={interiorImg} alt="" widths={[480, 960, 1440]} sizes="(min-width: 768px) 50vw, 100vw" class="w-full h-auto" />
+  </div>
+</section>
+
+<Marquee text={tr.home.marquee} variant="cream" />

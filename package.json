@@ -1,0 +1,27 @@
+{
+  "name": "haivino-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HAiViNO Wine Bistrot website (Astro + Tailwind v4, RO + EN, deploys to GitHub Pages)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

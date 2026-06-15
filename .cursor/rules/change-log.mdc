@@ -1,0 +1,40 @@
+---
+description: Append a one-line entry to CHANGES.log for every file creation, update, rename, or deletion
+alwaysApply: true
+---
+
+# File Change Log Discipline
+
+Every time you **create**, **update**, **rename**, or **delete** a file in this workspace, append a one-line entry to `CHANGES.log` at the repository root. This is the project's audit trail — keep it accurate, chronological, and skimmable.
+
+## Format (strict, one line per change)
+
+```
+YYYY-MM-DD HH:MM | ACTION | path/to/file | short reason (max ~80 chars)
+```
+
+- `YYYY-MM-DD HH:MM` — 24h local time (use the current timestamp from the user info / system date)
+- `ACTION` — one of: `CREATE`, `UPDATE`, `RENAME`, `DELETE`
+- `path/to/file` — repo-relative path with forward slashes (for `RENAME`, write `old -> new`)
+- `short reason` — what & why, in one phrase. No multi-line entries.
+
+## Examples
+
+```
+2026-06-15 10:09 | CREATE | README.md | initial project readme for wine bistrot site
+2026-06-15 10:12 | UPDATE | src/index.html | wired hero section to menu anchor
+2026-06-15 10:20 | RENAME | css/main.css -> assets/css/main.css | reorganize assets folder
+2026-06-15 10:25 | DELETE | tmp/scratch.html | remove leftover scratch file
+```
+
+## Rules
+
+- **Batching**: If you change many files in one logical step, write one line per file — do not collapse into a single entry.
+- **Order**: Always append at the bottom; never reorder or rewrite history.
+- **Do not log** changes to `CHANGES.log` itself (avoid recursion).
+- **Do not log** transient build artifacts or files under `node_modules/`, `dist/`, `build/`, `.cache/`.
+- If `CHANGES.log` does not exist, create it with the standard header before appending.
+
+## When unsure
+
+If a single edit touches both a file and its rename, log the rename first, then the update on the new path.

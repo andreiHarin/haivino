@@ -1,0 +1,17 @@
+---
+import { t, type Locale } from "../i18n/utils";
+import { contacts } from "../data/contacts";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale);
+const otherLabel = locale === "ro" ? "BOOK" : "REZERVĂ";
+---
+<a
+  href={`tel:${contacts.phone.tel}`}
+  class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-burgundy text-cream font-medium tracking-wide shadow-[0_8px_24px_rgba(110,31,42,0.35)] hover:bg-burgundy-soft hover:scale-[1.03] transition-all"
+  aria-label={`${tr.cta.bookHere} — ${contacts.phone.national}`}
+>
+  <span aria-hidden="true">☎</span>
+  <span class="text-sm md:text-base">{tr.cta.book} <span class="opacity-60 mx-1">/</span> {otherLabel}</span>
+</a>
